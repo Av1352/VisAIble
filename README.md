@@ -7,11 +7,19 @@
 
 ## 🔑 Highlights & Demo
 
-|      | Real Example                                        | Fake Example                                         |
-|------|-----------------------------------------------------|------------------------------------------------------|
-| **Original**  | ![](sample_real.jpg)                       | ![](sample_fake.jpg)                                 |
-| **Grad-CAM**  | ![](explanations/gradcam_real.png)         | ![](explanations/gradcam_fake.png)                   |
-| **LIME**      | ![](explanations/lime_real.png)            | ![](explanations/lime_fake.png)                      |
+<div align="center">
+
+| Real Example | Fake Example |
+|:-------------:|:-------------:|
+| ![](sample_real.jpg) | ![](sample_fake.jpg) |
+| ![](explanations/gradcam_real.png) | ![](explanations/gradcam_fake.png) |
+| ![](explanations/lime_real.png) | ![](explanations/lime_fake.png) |
+
+**Full pipeline demo:**  
+![](assets/demo.gif)
+
+</div>
+
 
 **Full pipeline GIF:**  
 ![](assets/demo.gif)
@@ -20,48 +28,52 @@
 
 ---
 
-## 🥇 TL;DR Results Table
+## 🥇 TL;DR Results
 
-| Metric         | Value                  | Visual Example                    |
-|----------------|-----------------------|-----------------------------------|
-| Model Type     | EfficientNet-B0 (timm) | ![](explanations/gradcam_real.png) |
-| Final Test Acc | _Fill in from notebook_| ![](explanations/lime_fake.png)    |
-| Dataset Size   | 140k images (Kaggle), 2GB generated pairs, 100MB ground truth |
-| XAI Methods    | Grad-CAM, LIME         |                                   |
+| Metric         | Value                    | Visual Example                    |
+|----------------|--------------------------|-----------------------------------|
+| Model          | EfficientNet-B0 (timm)   | ![](explanations/gradcam_real.png) |
+| Test Accuracy  | **97.75%**               | ![](explanations/lime_fake.png)    |
+| Dataset Size   | 140k images (2GB total)  |                                   |
+| XAI Methods    | Grad-CAM, LIME           |                                   |
 
 ---
 
 ## 🚀 Why This Matters
 
-AI-generated faces are rapidly proliferating, risking security and information integrity. *VisAIble* demonstrates scalable, explainable deepfake detection so that both users and industries can trust automated image classification decisions.
+Deepfakes are eroding digital trust. **VisAIble** provides explainable detection using state-of-the-art XAI techniques, showing *why* a prediction was made.  
+This approach supports **AI accountability** and is relevant for industries like **media forensics, cybersecurity, and content verification**.
 
 ---
 
 ## 🛠️ How to Run
 
-1. **Install dependencies:**  
+1. > 💻 **Quick Start:** Open [VisAIble on Colab](https://colab.research.google.com/github/Av1352/VisAIble/blob/main/notebooks/code.ipynb) — no setup needed.
+
+2. **Install dependencies:**  
 pip install torch torchvision timm shap lime opencv-python matplotlib
 
 
-2. **Download datasets:**  
+3. **Download datasets:**  
 - [Kaggle: Real and Fake Faces](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces) — 140,000 images
 - [Generated Pairs Archive](https://northeastern-my.sharepoint.com/:u:/r/personal/mahadevarao_s_northeastern_edu/Documents/generated_pairs_full_archive.zip?csf=1&web=1&e=5frkzF) — 2GB
 - [Ground Truth Data](https://drive.google.com/drive/folders/1Dlh392g0tmBnJ64JEHcLC_XJNSMSdMxP?usp=drive_link) — 100MB
 
-3. **Training & Finetuning:**  
+4. **Training & Finetuning:**  
 - See [notebooks/code.ipynb](notebooks/code.ipynb) for basic training and [notebooks/code_finetune.ipynb](notebooks/code_finetune.ipynb) for advanced options (early stopping, scheduler).
 
-4. **Generate explanations:**  
+5. **Generate explanations:**  
 python generate_explanations.py
 Output: `explanations/gradcam_*.png`, `explanations/lime_*.png`, used in demo.
 
-5. **Create GIF for portfolio/README:**  
+6. **Create GIF for portfolio/README:**  
 Output: `assets/demo.gif`
 
 ---
 
 ## 📂 Project Structure
 
+```bash
 VisAIble/
 ├─ assets/ # GIFs, demo screenshots
 ├─ explanations/ # Grad-CAM, LIME outputs
@@ -74,7 +86,7 @@ VisAIble/
 ├─ sample_real.jpg
 ├─ sample_fake.jpg
 └─ README.md
-
+```
 
 ---
 
@@ -101,3 +113,8 @@ VisAIble/
 - Each file, function, and class includes explanatory comments and docstrings.
 - Notebooks are organized (see `notebooks/`), show training and explainability inline.
 - All README and notebook prose has been spellchecked, bulleted lists expanded.
+
+---
+📦 **Version:** v1.0 (Stable Release)  
+👩‍💻 **Author:** Anju Vilashni Nandhakumar  
+📬 **Contact:** [LinkedIn](https://www.linkedin.com/in/your-link/) | [Portfolio](https://vxanju.com/)
