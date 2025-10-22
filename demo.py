@@ -9,7 +9,7 @@ def make_demo():
         "explanations/lime_fake.png"
     ]
     imgs = [imageio.v2.imread(p) for p in paths if Path(p).exists()]
-    imageio.mimsave("assets/demo.gif", imgs, fps=1)  # fps=1: 1 second per frame
+    imageio.mimsave("assets/demo.gif", imgs, loop=0, fps=0.9)  # fps=1: 1 second per frame
 
 if __name__ == "__main__":
     make_demo()
