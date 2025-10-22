@@ -1,5 +1,11 @@
 # VisAIble: Explainable Deepfake Detection with EfficientNet-B0, Grad-CAM & LIME
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![PyTorch](https://img.shields.io/badge/Framework-PyTorch-red)
+![Explainability](https://img.shields.io/badge/XAI-GradCAM%2FLIME-yellow)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Av1352/VisAIble/blob/main/notebooks/code.ipynb)
+
+> 🧠 *Built an explainable deepfake detector using EfficientNet-B0, Grad-CAM, and LIME — visualizing what the model “sees” when distinguishing real vs. fake faces.*
 
 **Detect and interpret AI-generated images using fine-tuned EfficientNet-B0 with full XAI workflow. Transparent trust-building for real vs fake image classification.**
 
@@ -44,25 +50,29 @@ This approach supports **AI accountability** and is relevant for industries like
 
 ## 🛠️ How to Run
 
-1. > 💻 **Quick Start:** Open [VisAIble on Colab](https://colab.research.google.com/github/Av1352/VisAIble/blob/main/notebooks/code.ipynb) — no setup needed.
+> 💻 **Quick Start:** Open [VisAIble on Colab](https://colab.research.google.com/github/Av1352/VisAIble/blob/main/notebooks/code.ipynb) — no setup needed.
 
-2. **Install dependencies:**  
+1. **Install dependencies:**  
+```bash
 pip install torch torchvision timm shap lime opencv-python matplotlib
+```
 
-
-3. **Download datasets:**  
+2. **Download datasets:**  
 - [Kaggle: Real and Fake Faces](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces) — 140,000 images
 - [Generated Pairs Archive](https://northeastern-my.sharepoint.com/:u:/r/personal/mahadevarao_s_northeastern_edu/Documents/generated_pairs_full_archive.zip?csf=1&web=1&e=5frkzF) — 2GB
 - [Ground Truth Data](https://drive.google.com/drive/folders/1Dlh392g0tmBnJ64JEHcLC_XJNSMSdMxP?usp=drive_link) — 100MB
 
-4. **Training & Finetuning:**  
-- See [notebooks/code.ipynb](notebooks/code.ipynb) for basic training and [notebooks/code_finetune.ipynb](notebooks/code_finetune.ipynb) for advanced options (early stopping, scheduler).
+3. **Training & Finetuning:**  
+- See [notebooks/code.ipynb](notebooks/code.ipynb) for basic training and 
+- See [notebooks/code_finetune.ipynb](notebooks/code_finetune.ipynb) for advanced options (early stopping, scheduler).
 
-5. **Generate explanations:**  
+4. **Generate explanations:**  
+```bash
 python generate_explanations.py
+```
 Output: `explanations/gradcam_*.png`, `explanations/lime_*.png`, used in demo.
 
-6. **Create GIF for portfolio/README:**  
+5. **Create GIF for portfolio/README:**  
 Output: `assets/demo.gif`
 
 ---
