@@ -8,16 +8,15 @@ import matplotlib.pyplot as plt
 from lime import lime_image
 from skimage.segmentation import mark_boundaries
 import os
+import timm
 
 # Set device
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Load the model
-def load_model(model_path='models/efficientnet_b0_real_vs_fake.pth'):
-    model = models.efficientnet_b0(pretrained=False)
-    num_features = model.classifier[1].in_features
-    model.classifier[1] = nn.Linear(num_features, 2)  # Binary classification
-    model.load_state_dict(torch.load(model_path, map_location=device))
+def load_model():
+    model = timm.create_model("efficientnet_b0", pretrained=False, num_classes=2)  # Binary classification
+    model.load_state_dict(torch.load("models/efficientnet_b0_real_vs_fake.pth", weights_only=True))
     model = model.to(device)
     model.eval()
     return model
@@ -37,7 +36,7 @@ class GradCAM:
         self.activations = None
         
         # Register hooks for EfficientNet
-        target_layer = self.model.features[-1]
+        target_layer = self.model.blocks[-1]
         target_layer.register_forward_hook(self.save_activation)
         target_layer.register_backward_hook(self.save_gradient)
     
