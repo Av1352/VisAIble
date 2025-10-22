@@ -1,4 +1,5 @@
 # VisAIble: Explainable Deepfake Detection with EfficientNet-B0, Grad-CAM & LIME
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Av1352/VisAIble/blob/main/notebooks/code.ipynb)
 
 **Detect and interpret AI-generated images using fine-tuned EfficientNet-B0 with full XAI workflow. Transparent trust-building for real vs fake image classification.**
 
