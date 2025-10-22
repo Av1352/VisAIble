@@ -20,10 +20,6 @@
 
 </div>
 
-
-**Full pipeline GIF:**  
-![](assets/demo.gif)
-
 *Test accuracy:* See results in [notebooks/code.ipynb](notebooks/code.ipynb), typically >95% on Kaggle validation split.
 
 ---
