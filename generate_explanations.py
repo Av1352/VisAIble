@@ -105,7 +105,7 @@ def apply_gradcam(image_path, model, output_path):
     return pred_class
 
 # LIME implementation
-def predict_fn(images):
+def predict_fn(images, model):
     batch = torch.stack([transform(Image.fromarray(img.astype('uint8'))) for img in images])
     batch = batch.to(device)
     
@@ -123,10 +123,13 @@ def apply_lime(image_path, model, output_path):
     # Create LIME explainer
     explainer = lime_image.LimeImageExplainer()
     
+    classifier_fn = lambda images: predict_fn(images, model)
+    
+    
     # Generate explanation
     explanation = explainer.explain_instance(
         img_array,
-        predict_fn,
+        classifier_fn,
         top_labels=2,
         hide_color=0,
         num_samples=1000

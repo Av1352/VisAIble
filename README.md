@@ -11,15 +11,12 @@
 
 ---
 
-## 🔑 Highlights & Demo
+## 🔎 Highlights & Demo
 
-<div align="center">
+- **Live Demo:**  
+  [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://tumor-classification-xai.streamlit.app/)  
+  _Try tumor prediction and XAI heatmaps interactively!_
 
-| Real Example | Fake Example |
-|:-------------:|:-------------:|
-| ![](sample_real.jpg) | ![](sample_fake.jpg) |
-| ![](explanations/gradcam_real.png) | ![](explanations/gradcam_fake.png) |
-| ![](explanations/lime_real.png) | ![](explanations/lime_fake.png) |
 
 **Full pipeline demo:**  
 ![](assets/demo.gif)
