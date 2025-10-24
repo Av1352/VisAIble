@@ -4,7 +4,7 @@ timm >= 0.6.13
 matplotlib >= 3.5.0
 numpy >= 1.22.0
 pillow >= 9.0.0
-opencv-python >= 4.5.0
+opencv-python-headless
 lime >= 0.2.0.1
 scikit-image >= 0.18.0
 imageio >= 2.9.0
