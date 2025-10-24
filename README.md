@@ -11,7 +11,7 @@
 ## 🔎 Highlights & Demo
 
 - **Live Demo:**  
-  [![Open in Streamlit](https://static.streamlit.io/badges/streamlit.svg)](https://visaible.streamlit.app/)  
+  [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://visaible.streamlit.app/)  
   _Try tumor prediction and XAI heatmaps interactively!_
 
 **Full pipeline demo:**  
