@@ -8,12 +8,6 @@
 
 ---
 
-## ⚠️ Important: Python Version Requirement
-
-**Note: This app does NOT work on Python 3.13+. Please use Python 3.12 or earlier, as imghdr is removed in Python 3.13 and Streamlit currently requires it.**
-
----
-
 ## 🔎 Highlights & Demo
 
 - **Live Demo:**  
